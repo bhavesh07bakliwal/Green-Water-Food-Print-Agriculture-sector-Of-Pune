@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Water Footprinting In Agriculture</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="heading-primary">Green Water Footprinting</h1>
+
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li>
+            <a class="main-nav-link" href="#">Home</a>
+          </li>
+          <li>
+            <a class="main-nav-link" href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a class="main-nav-link" href="#benefits">Benefits</a>
+          </li>
+          <li>
+            <a class="main-nav-link" href="#calculate">Calculate water footprint</a>
+          </li>
+          <li>
+            <a class="main-nav-link" href="#">Case studies</a>
+          </li>
+          <li>
+            <a class="main-nav-link" href="#resources">Resources</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section-introduction" id="introduction">
+        <div class="container">
+          <h2 class="heading-secondary">Introduction</h2>
+
+          <p class="introduction-description">
+            Water footprinting is an important aspect of sustainable agriculture. It helps to measure the amount of water used in agricultural production and identify areas for improvement. In this project, we will explore the concept of water footprinting and its applications in agriculture. Among
+            the different types of water footprints, the green water footprint refers to the amount of rainwater stored in the soil and used by plants for growth, which is particularly important in agriculture and forestry. Unlike blue water, which is drawn from surface or groundwater sources, green
+            water is naturally available in ecosystems and significantly influences crop productivity and environmental sustainability.
+          </p>
+
+          <h3 class="introduction-subheading">The three water footprint options :</h3>
+
+          <p class="introduction-description"><span>Green water</span> footprint is water from precipitation that is stored in the root zone of the soil and evaporated, transpired or incorporated by plants. It is particularly relevant for agricultural, horticultural and forestry products</p>
+
+          <p class="introduction-description">
+            <span>Blue water</span> footprint is water that has been sourced from surface or groundwater resources and is either evaporated, incorporated into a product or taken from one body of water and returned to another, or returned at a different time. Irrigated agriculture, industry and
+            domestic water use can each have a blue water footprint.
+          </p>
+
+          <p class="introduction-description">
+            <span>Grey water</span> footprint is the amount of fresh water required to assimilate pollutants to meet specific water quality standards. The grey water footprint considers point-source pollution discharged to a freshwater resource directly through a pipe or indirectly through runoff or
+            leaching from the soil, impervious surfaces, or other diffuse sources.
+          </p>
+
+          <p class="introduction-description">
+            In this project, we will explore the concept of green water footprinting and its relevance in promoting efficient water usage in agriculture. Understanding the role of green water in crop growth can help reduce the pressure on freshwater resources and promote sustainable farming
+            practices. By calculating the green water footprint for various crops and analyzing its implications, this project aims to provide insights into improving water management strategies, enhancing food security, and mitigating environmental impacts related to water scarcity.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-benefit" id="benefits">
+        <div class="container">
+          <h2 class="heading-secondary">Benefits</h2>
+
+          <p class="benefit-description">A Green Water Footprint Calculator measures the amount of rainwater consumed in the production of goods or services. Using such a calculator offers several benefits, especially in terms of environmental awareness, resource management, and sustainability:</p>
+
+          <ul class="benefit-list">
+            <li>Improved water use efficiency</li>
+            <li>Reduced water waste</li>
+            <li>Enhanced crop yields</li>
+            <li>Better decision making for water management</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section-calculate" id="calculate">
+        <div class="container">
+          <h2 class="heading-secondary">Calculate Water Footprint</h2>
+
+          <div class="grid grid--2-cols calculate-grid">
+            <div>
+              <h3 class="introduction-subheading calculate-subheading">Land details :</h3>
+              <div class="form-group">
+                <label for="landSize">Land Size (in hectares) :</label>
+                <input type="number" id="landSize" name="landSize" required />
+              </div>
+
+              <div class="form-group">
+                <label for="taluka">Taluka :</label>
+                <input type="text" id="taluka" name="taluka" required />
+              </div>
+
+              <div class="form-group">
+                <label for="district">District :</label>
+                <input type="text" id="district" name="district" required />
+              </div>
+            </div>
+
+            <div>
+              <h3 class="introduction-subheading calculate-subheading">Soil details :</h3>
+              <div class="form-group">
+                <label for="soilName">Soil name :</label>
+                <input type="text" id="soilName" name="soilName" required />
+              </div>
+
+              <div class="form-group">
+                <label for="soilType">Soil type :</label>
+                <input type="text" id="soilType" name="soilType" required />
+              </div>
+
+              <div class="form-group">
+                <label for="waterHolding">Water holding capacity :</label>
+                <input type="number" id="waterHolding" name="waterHolding" required />
+              </div>
+            </div>
+
+            <div>
+              <h3 class="introduction-subheading calculate-subheading">Crop details :</h3>
+              <div class="form-group">
+                <label for="cropName">Crop name :</label>
+                <input type="text" id="cropName" name="cropName" required />
+              </div>
+
+              <div class="form-group">
+                <label for="waterRqr">Water requirement :</label>
+                <input type="text" id="waterRqr" name="waterRqr" required />
+              </div>
+
+              <div class="form-group">
+                <label for="cropYield">Crop yield :</label>
+                <input type="text" id="cropYield" name="cropYield" required />
+              </div>
+            </div>
+          </div>
+
+          <button class="calculate-btn btn">Calculate GWF</button>
+        </div>
+      </section>
+
+      <section class="section-resource" id="resources">
+        <div class="container">
+          <h2 class="heading-secondary">Resources</h2>
+
+          <p class="resource-description">The following resources are available for further learning:</p>
+
+          <ul class="resource-list">
+            <li>
+              <a href="https://www.waterfootprint.org/" target="_blank">Water Footprint Network</a>
+            </li>
+            <li>
+              <a href="https://www.fao.org/water" target="_blank">FAO Water</a>
+            </li>
+            <li>
+              <a href="https://www.unwater.org/" target="_blank">UN Water</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <footer class="footer">&copy; 2024 Water Footprinting In Agriculture</footer>
+    </main>
+  </body>
+</html>

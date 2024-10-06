@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      body {
+        margin: 0;
+        background-image: url(agriculture-image-2.jpg);
+        background-image: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.3)), url(agriculture-image-2.jpg);
+        background-size: cover;
+      }
+
+      h1 {
+        margin: 0;
+      }
+
+      p {
+        color: #5c940d;
+        font-family: "Lato";
+        margin: 10px 0 5px;
+        font-weight: 600;
+      }
+
+      ::placeholder {
+        font-family: "Arial", sans-serif;
+      }
+
+      /* Containers Styles */
+      .top {
+        background-color: #66a80f;
+        background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9 0h2v20H9V0zm25.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm-20 20l1.732 1-10 17.32-1.732-1 10-17.32zM58.16 4.134l1 1.732-17.32 10-1-1.732 17.32-10zm-40 40l1 1.732-17.32 10-1-1.732 17.32-10zM80 9v2H60V9h20zM20 69v2H0v-2h20zm79.32-55l-1 1.732-17.32-10L82 4l17.32 10zm-80 80l-1 1.732-17.32-10L2 84l17.32 10zm96.546-75.84l-1.732 1-10-17.32 1.732-1 10 17.32zm-100 100l-1.732 1-10-17.32 1.732-1 10 17.32zM38.16 24.134l1 1.732-17.32 10-1-1.732 17.32-10zM60 29v2H40v-2h20zm19.32 5l-1 1.732-17.32-10L62 24l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM111 40h-2V20h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zM40 49v2H20v-2h20zm19.32 5l-1 1.732-17.32-10L42 44l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM91 60h-2V40h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM39.32 74l-1 1.732-17.32-10L22 64l17.32 10zm16.546 4.16l-1.732 1-10-17.32 1.732-1 10 17.32zM71 80h-2V60h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM120 89v2h-20v-2h20zm-84.134 9.16l-1.732 1-10-17.32 1.732-1 10 17.32zM51 100h-2V80h2v20zm3.134.84l1.732 1-10 17.32-1.732-1 10-17.32zm24.026 3.294l1 1.732-17.32 10-1-1.732 17.32-10zM100 109v2H80v-2h20zm19.32 5l-1 1.732-17.32-10 1-1.732 17.32 10zM31 120h-2v-20h2v20z' fill='%23ffffff' fill-opacity='0.28' fill-rule='evenodd'/%3E%3C/svg%3E");
+        width: 500px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+      }
+
+      .bottom {
+        background-color: rgb(241, 241, 241, 0.8);
+        width: 500px;
+        padding: 20px;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+      }
+
+      .parent-container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .contact-form {
+        box-shadow: 4px 3px 20px #3535358c;
+        border-radius: 12px;
+      }
+
+      /* Inputs Styles */
+
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      input[type="password"],
+      .message-textarea,
+      .dropdown {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 7px;
+        border: 2px solid #adb5bd;
+        border-radius: 5px;
+        outline: none;
+      }
+
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      input[type="number"]:focus,
+      input[type="password"]:focus,
+      .dropdown:focus {
+        border: 2px solid #5c940d;
+      }
+
+      .message-textarea {
+        height: 100px;
+      }
+
+      .message-textarea:focus {
+        font-family: "Arial", sans-serif;
+      }
+
+      .dropdown {
+        margin-bottom: 23px;
+      }
+
+      .submit-button {
+        background-color: #66a80f;
+        border-style: none;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 18px;
+        width: 100%;
+        padding: 12px;
+        transition: 0.2s;
+      }
+
+      .submit-button:hover {
+        background-color: #4b7c0b;
+        /* box-shadow: 5px 5px 15px #4b7c0bab; */
+        cursor: pointer;
+      }
+
+      /* Texts and Headings */
+
+      .contact-form-heading {
+        font-family: "Lato";
+        color: #fff;
+      }
+
+      .contact-sub-heading {
+        margin: 3px 0 0;
+        color: #fff;
+      }
+
+      .already-text {
+        font-weight: normal;
+        color: #343a40;
+        text-align: center;
+      }
+
+      .register-span,
+      .login-span {
+        color: #4b7c0b;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .login-bottom div {
+        display: flex;
+        align-items: center;
+      }
+
+      .login-bottom div:first-child {
+        margin-bottom: 1rem;
+      }
+
+      .login-bottom div i {
+        color: #fff;
+        background-color: #5c940d;
+        font-size: 1rem;
+        border-radius: 5px;
+        padding: 0.5rem;
+        margin-right: 0.5rem;
+      }
+
+      .login-btn {
+        margin-top: 2rem;
+      }
+
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="parent-container registration-form">
+      <div class="contact-form">
+        <div class="top">
+          <h1 class="contact-form-heading">Registration Form</h1>
+          <p class="contact-sub-heading">Please fill all the information in the fields.</p>
+        </div>
+
+        <div class="bottom">
+          <p style="margin-top: 0">Name:</p>
+          <input type="text" placeholder="Your Name" />
+
+          <p>Email:</p>
+          <input type="email" placeholder="Your Email" />
+
+          <p>Phone Number:</p>
+          <input type="number" placeholder="Your Number" />
+
+          <p>Select Taluka:</p>
+          <select class="dropdown">
+            <option value="">--Select Taluka--</option>
+            <option value="">Ambegaon</option>
+            <option value="">Baramati</option>
+            <option value="">Bhor</option>
+            <option value="">Daund</option>
+            <option value="">Haveli</option>
+            <option value="">Indapur</option>
+            <option value="">Junnar</option>
+            <option value="">Khed</option>
+            <option value="">Mawal</option>
+            <option value="">Mulshi</option>
+            <option value="">Pune City</option>
+            <option value="">Purandhar</option>
+            <option value="">Shirur</option>
+            <option value="">Velhe</option>
+          </select>
+
+          <input type="button" value="Submit" class="submit-button" />
+
+          <p class="already-text">Already have an account? <span class="login-span">Login now</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="parent-container login-form hide">
+      <div>
+        <div class="top">
+          <h1 class="login-form-heading">Customer Login</h1>
+        </div>
+
+        <div class="bottom login-bottom">
+          <div>
+            <i class="fa-solid fa-user"></i>
+            <input type="text" placeholder="ID" />
+          </div>
+
+          <div>
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" placeholder="Password" />
+          </div>
+
+          <a href="index.html"><input type="button" value="Login" class="submit-button login-btn" /></a>
+
+          <p class="already-text">Not a member? <span class="register-span">Signup now</span></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const registrationForm = document.querySelector(".registration-form");
+      const loginForm = document.querySelector(".login-form");
+      const loginBtn = document.querySelector(".login-span");
+      const registerBtn = document.querySelector(".register-span");
+
+      registerBtn.addEventListener("click", function () {
+        registrationForm.classList.toggle("hide");
+        loginForm.classList.toggle("hide");
+      });
+
+      loginBtn.addEventListener("click", function () {
+        registrationForm.classList.toggle("hide");
+        loginForm.classList.toggle("hide");
+      });
+    </script>
+  </body>
+</html>
