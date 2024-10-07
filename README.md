@@ -1,0 +1,1 @@
+A project focused on optimizing water usage in Pune's agricultural sector by calculating the Green Water Footprint (GWF) for various crops and soil types. This web-based application aims to help farmers manage rainwater effectively, improving crop yields and promoting sustainable water resource management.
